@@ -1,0 +1,23 @@
+{
+  "name": "json-to-html-bookmarklet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack && bookmarklet dist/index.js dist/index.txt && echo \"\\nlink\" >> dist/index.txt && html-link < dist/index.txt > dist/index.html",
+    "open": "opn dist/index.html"
+  },
+  "keywords": [],
+  "author": "Anders D. Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "json-to-html": "github:AndersDJohnson/json-to-html#AndersDJohnson-no-umd",
+    "load-script": "^1.0.0"
+  },
+  "devDependencies": {
+    "bookmarklet": "0.0.6",
+    "html-link": "^1",
+    "opn-cli": "^3.1.0",
+    "webpack": "^1.13.1"
+  }
+}
